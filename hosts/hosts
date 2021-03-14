@@ -1,0 +1,10 @@
+[all:children]
+aws_ubuntu
+
+[aws_ubuntu]
+svr1 ansible_host=3.16.68.203
+
+[aws_ubuntu:vars]
+ansible_ssh_private_key_file=/etc/ansible/keys/13-home-pk.pem
+ansible_user=ubuntu
+ansible_python_interpreter=python3

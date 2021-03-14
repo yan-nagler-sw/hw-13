@@ -1,0 +1,13 @@
+---
+- name: Ping
+  action: ping
+
+- name: Install packages - vim, zip
+  become: yes
+  apt:
+    name: "{{ item.pkg }}"
+    update_cache: true
+    state: latest
+  loop:
+  - { pkg: 'vim' }
+  - { pkg: 'zip' }
